@@ -15,7 +15,9 @@ jobs:
   deploy-prod:
     name: Deploy Release to PROD
     runs-on: ubuntu-latest
-
+    environment:
+      name: prod
+      
     steps:
       - name: Checkout release tag
         uses: actions/checkout@v4
