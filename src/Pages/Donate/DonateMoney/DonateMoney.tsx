@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import CardItem from "../../../Components/CardItem/CardItem";
-import StyledButton from "../../../Components/StyledButton/StyledButton";
+import CardItem from "../../../components/CardItem/CardItem";
+import StyledButton from "../../../components/StyledButton/StyledButton";
 import { donationMethods } from "./donationMethods";
 
 // (bad practice will update)
