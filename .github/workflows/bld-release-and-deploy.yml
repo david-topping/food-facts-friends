@@ -50,9 +50,10 @@ jobs:
         run: cp .htaccess dist/
 
       - name: Create GitHub Release
-        run: npx semantic-release
         env:
+          HUSKY: 0
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
 
       - name: Deploy to BLD
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
