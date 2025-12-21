@@ -1,83 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&display=swap");
-
-:root {
-  --primary-color: #044924;
-  --primary-color-lighter: #085f31;
-  --secondary-color: #474747;
-  --link-color: #408572;
-  --link-hover-color: #03582b;
-  --btn-bg: #4da38c;
-  --btn-hover-bg: #3a816e;
-
-  --font-size-h1: clamp(30px, 5vw, 45px);
-  --font-size-h2: clamp(24px, 4vw, 32px);
-  --font-size-h3: clamp(21px, 3.5vw, 28px);
-  --font-size-h4: clamp(19px, 3vw, 25px);
-  --font-size-h5: clamp(18px, 2.5vw, 23px);
-  --font-size-h6: clamp(15px, 2vw, 18px);
-  --font-size-p: clamp(14px, 2vw, 16px);
-}
-
-body {
-  font-family: "Inter", sans-serif;
-}
-
-/* Headings */
-.heading-1,
-.page-title {
-  font-family: "Bungee", cursive;
-  font-size: var(--font-size-h1);
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
-  color: var(--primary-color);
 }
 
-.page-title {
-  font-family: "Oswald", sans-serif;
-  color: var(--secondary-color);
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.heading-2 {
-  font-family: "Oswald", sans-serif;
-  font-size: var(--font-size-h2);
-  color: var(--secondary-color);
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.heading-3,
-.heading-4,
-.heading-5,
-.heading-6 {
-  font-family: "Oswald", sans-serif;
-  color: var(--primary-color-lighter);
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-.heading-3 {
-  font-size: var(--font-size-h3);
-}
-.heading-4 {
-  font-size: var(--font-size-h4);
-}
-.heading-5 {
-  font-size: var(--font-size-h5);
-}
-.heading-6 {
-  font-size: var(--font-size-h6);
+.card {
+  padding: 2em;
 }
 
-/* Paragraphs */
-p {
-  color: var(--secondary-color);
-  font-size: var(--font-size-p);
-}
-
-/* Links */
-a {
-  color: var(--link-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--link-hover-color);
+.read-the-docs {
+  color: #888;
 }
