@@ -1,6 +1,6 @@
-import Banner from "../../Components/Banner/Banner";
+import Banner from "../../components/Banner/Banner";
 import DonateBanner from "../../assets/images/banners/donate_banner.jpg";
-import IconCardGrid from "../../Components/IconCardGrid/IconCardGrid";
+import IconCardGrid from "../../components/IconCardGrid/IconCardGrid";
 import { donationOptions } from "./DonationOptions";
 
 function Donate() {

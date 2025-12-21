@@ -1,7 +1,7 @@
 import { Container, Row, Col, Table } from "react-bootstrap";
-import Banner from "../../Components/Banner/Banner";
-import CardItem from "../../Components/CardItem/CardItem";
-import ServiceStatus from "../../Components/ServiceStatus/ServiceStatus";
+import Banner from "../../components/Banner/Banner";
+import CardItem from "../../components/CardItem/CardItem";
+import ServiceStatus from "../../components/ServiceStatus/ServiceStatus";
 import { openingHoursData } from "./openingHoursData";
 
 // Group and merge hours by day

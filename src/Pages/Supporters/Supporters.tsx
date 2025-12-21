@@ -1,6 +1,6 @@
-import SupportersGallery from "../../Components/ImageGallery/ImageGallery";
+import SupportersGallery from "../../components/ImageGallery/ImageGallery";
 import supportersBanner from "../../assets/images/banners/supporters_banner.jpg";
-import Banner from "../../Components/Banner/Banner";
+import Banner from "../../components/Banner/Banner";
 
 function Supporters() {
   const logos = Object.values(

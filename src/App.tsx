@@ -26,13 +26,13 @@ import DonateItems from "./Pages/Donate/DonateItems/DonateItems";
 import DonateRecycle from "./Pages/Donate/DonateRecyclables/DonateRecyclables";
 
 // Components
-import Header from "./Components/Header/Header";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 
-const googleAnalyticsId = import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID;
+const googleAnalyticsId = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
 ReactGA.initialize(googleAnalyticsId);
 
 function Analytics() {

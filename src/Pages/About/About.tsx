@@ -1,7 +1,7 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { AboutText } from "./AboutInfo";
 import eventBanner from "../../assets/images/banners/event.jpg";
-import Banner from "../../Components/Banner/Banner";
+import Banner from "../../components/Banner/Banner";
 
 function About() {
   return (
