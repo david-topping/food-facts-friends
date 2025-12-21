@@ -1,0 +1,15 @@
+#!/bin/sh
+
+branch="$(git symbolic-ref --short HEAD)"
+
+regex="^(feature|fix|chore|docs|refactor|test)\/[a-z0-9-]+$"
+
+if ! echo "$branch" | grep -Eq "$regex"; then
+  echo "❌ Invalid branch name: $branch"
+  echo ""
+  echo "Expected format:"
+  echo "  feature/my-feature"
+  echo "  fix/bug-name"
+  echo "  chore/update-deps"
+  exit 1
+fi
