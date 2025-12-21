@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
-import CardItem from "../../Components/CardItem/CardItem";
-import Banner from "../../Components/Banner/Banner";
+import CardItem from "../../components/CardItem/CardItem";
+import Banner from "../../components/Banner/Banner";
 import contactBanner from "../../assets/images/banners/contact_banner.jpg";
 import { contactInfoCardText } from "./ContactText";
 

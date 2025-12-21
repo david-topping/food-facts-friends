@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import HomeInfo from "../../Components/HomeInfo/HomeInfo";
-import OurLocation from "../../Components/OurLocation/OurLocation";
-import CommunityHubMessage from "../../Components/InfoMessage/InfoMessage";
-import Banner from "../../Components/Banner/Banner";
+import HomeInfo from "../../components/HomeInfo/HomeInfo";
+import OurLocation from "../../components/OurLocation/OurLocation";
+import CommunityHubMessage from "../../components/InfoMessage/InfoMessage";
+import Banner from "../../components/Banner/Banner";
 
 import homeBanner from "../../assets/images/banners/home_banner.jpg";
 import useFadeInOnLoad from "../../hooks/useFadeInOnLoad";
