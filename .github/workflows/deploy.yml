@@ -1,15 +1,15 @@
-name: Publish Website to cPanel
+name: Deploy to BLD on Main
 
 on:
   push:
     branches:
       - main
-      - pre-prod
 
 jobs:
   Deploy:
-    name: Deploy to Server
-    runs-on: windows-latest
+    name: Deploy Build Environment
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -17,14 +17,15 @@ jobs:
           fetch-depth: 1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: "npm"
+          node-version-file: .nvmrc
+          cache: npm
 
       - name: Install Dependencies
-        run: npm install --legacy-peer-deps
+        run: npm ci
 
+        # TODO: inject .env as a oner
       - name: Inject API Keys into .env
         run: |
           echo "VITE_GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}" >> .env
@@ -34,22 +35,12 @@ jobs:
         run: npm run build
 
       - name: Copy .htaccess to Build Directory
-        run: cp .htaccess ./dist/
+        run: cp .htaccess dist/
 
-      - name: Deploy to Pre Prod
-        if: github.ref == 'refs/heads/pre-prod'
+      - name: Deploy to BLD
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.PRE_PROD_FTP_USER }}
           password: ${{ secrets.PRE_PROD_FTP_PASS }}
-          local-dir: ./dist/
-
-      - name: Deploy to Prod
-        if: github.ref == 'refs/heads/main'
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.PROD_FTP_USER }}
-          password: ${{ secrets.PROD_FTP_PASS }}
-          local-dir: ./dist/
+          local-dir: dist/
