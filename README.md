@@ -7,8 +7,8 @@
 ## Links
 
 
-- **Live**: [https://www.foodfactsfriends.org.uk/](https://www.foodfactsfriends.org.uk/) (the new site is not live yet!)
-- **Pre-deployment**: [https://dev.foodfactsfriends.org.uk/](https://dev.foodfactsfriends.org.uk/)
+- **PRD**: [https://www.foodfactsfriends.org.uk/](https://www.foodfactsfriends.org.uk/)
+- **BLD**: [https://bld.foodfactsfriends.org.uk/](https://bld.foodfactsfriends.org.uk/)
 
 ## About
 
