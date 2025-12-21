@@ -14,7 +14,9 @@ jobs:
   deploy-bld:
     name: Build, Release & Deploy to BLD
     runs-on: ubuntu-latest
-
+    environment:
+      name: build
+      
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
