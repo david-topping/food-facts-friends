@@ -8,7 +8,7 @@ if ! echo "$branch" | grep -Eq "$regex"; then
   echo "❌ Invalid branch name: $branch"
   echo ""
   echo "Expected format:"
-  echo "  feature/my-feature"
+  echo "  feat/my-feature"
   echo "  fix/bug-name"
   echo "  chore/update-deps"
   exit 1
