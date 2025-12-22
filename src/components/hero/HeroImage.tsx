@@ -1,0 +1,31 @@
+import { Box, Container } from "@mui/material";
+import type { ResponsiveStyleValue } from "@mui/system";
+
+type HeroSectionProps = {
+  image: string;
+  height?: ResponsiveStyleValue<string | number>;
+  children?: React.ReactNode;
+};
+
+export const HeroImage = ({
+  image,
+  height = { xs: "30dvh", md: "25dvh" },
+  children,
+}: HeroSectionProps) => {
+  return (
+    <Box
+      component="section"
+      sx={{
+        width: "100%",
+        height,
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
+      <Container>{children}</Container>
+    </Box>
+  );
+};

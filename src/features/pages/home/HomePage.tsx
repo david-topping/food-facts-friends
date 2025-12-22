@@ -1,19 +1,20 @@
-import { Typography, Button, Stack } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Page } from "../../../components/layout/Page";
+import { Section } from "../../../components/layout/Section";
+import homeHero from "../../../assets/images/hero/home_hero.jpg";
+import { HeroImage } from "../../../components/hero/HeroImage";
+import { HOME_CONTENT } from "../../../content/home.content";
 
 export const HomePage = () => {
   return (
     <Page>
-      <Stack spacing={3}>
-        <Typography variant="h1">Food Facts Friends</Typography>
+      <HeroImage image={homeHero} />
 
-        <Typography color="text.secondary">Food Facts Friends</Typography>
+      <Section variant="default" maxWidth="xl">
+        <Typography variant="h2">{HOME_CONTENT.title}</Typography>
 
-        <Stack direction="row" spacing={2}>
-          <Button variant="contained">Get Started</Button>
-          <Button variant="outlined">Learn More</Button>
-        </Stack>
-      </Stack>
+        <Typography>{HOME_CONTENT.subText}</Typography>
+      </Section>
     </Page>
   );
 };
