@@ -1,4 +1,4 @@
-import { Stack, Typography, Box } from "@mui/material";
+import { Typography, Box, Stack } from "@mui/material";
 import Reveal from "../../../../components/animation/Reveal";
 import BrandLogo from "../../../../components/brand/BrandLogo";
 
@@ -10,20 +10,28 @@ type Props = {
 
 export function HomeHeroIntro({ title, subText, logo }: Props) {
   return (
-    <Stack spacing={{ xs: 4, sm: 0 }}>
-      <Reveal>
-        <Typography variant="h2">{title}</Typography>
-      </Reveal>
-
-      <Stack direction="row" spacing={4} alignItems="center" justifyContent="space-between">
+    <Stack spacing={1}>
+      <Box sx={{ display: { xs: "block", md: "none" } }}>
         <Reveal>
-          <Typography color="text.secondary" maxWidth={600}>
-            {subText}
-          </Typography>
+          <Typography variant="h2">{title}</Typography>
         </Reveal>
+      </Box>
+
+      <Stack direction="row" spacing={3} alignItems="center" justifyContent="space-between">
+        <Stack spacing={2} flex={1} maxWidth={600}>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <Reveal>
+              <Typography variant="h2">{title}</Typography>
+            </Reveal>
+          </Box>
+
+          <Reveal>
+            <Typography color="text.secondary">{subText}</Typography>
+          </Reveal>
+        </Stack>
 
         <Reveal direction="left">
-          <Box>
+          <Box flexShrink={0}>
             <BrandLogo src={logo} />
           </Box>
         </Reveal>
