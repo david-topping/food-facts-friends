@@ -8,11 +8,10 @@ export default function DesktopNav() {
   return (
     <Box
       sx={{
-        position: "absolute",
-        left: "50%",
-        transform: "translateX(-50%)",
+        flexGrow: 1,
         display: "flex",
-        gap: 6,
+        justifyContent: "center",
+        gap: { xs: 3, md: 7 },
       }}
     >
       {navRoutes.map((route) => (

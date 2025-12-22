@@ -12,7 +12,7 @@ export function MainLayout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Box display="flex" flexDirection="column" minHeight="100vh">
+    <Box display="flex" flexDirection="column" minHeight="100dvh">
       <Navbar isCollapsed={isMobile} onMenuOpen={() => setIsMenuOpen(true)} />
 
       <MobileMenuOverlay open={isMenuOpen} onClose={() => setIsMenuOpen(false)} />

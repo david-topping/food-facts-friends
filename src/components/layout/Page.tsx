@@ -1,18 +1,9 @@
-import { Container, Box } from "@mui/material";
+import { Box } from "@mui/material";
 
 type PageProps = {
-    children: React.ReactNode;
-    maxWidth?: "xs" | "sm" | "md" | "lg" | "xl";
+  children: React.ReactNode;
 };
 
-export const Page = ({ children, maxWidth = "xl" }: PageProps) => {
-    return (
-        <Container
-            component="main"
-            maxWidth={maxWidth}
-            sx={{ py: { xs: 3, md: 6 } }}
-        >
-            <Box>{children}</Box>
-        </Container>
-    );
+export const Page = ({ children }: PageProps) => {
+  return <Box component="main">{children}</Box>;
 };
