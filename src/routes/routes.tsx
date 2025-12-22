@@ -21,9 +21,21 @@ export const APP_ROUTES: AppRoute[] = [
     showInNav: true,
   },
   {
+    path: "/donate",
+    label: "Donate",
+    element: <div>Donate</div>,
+    showInNav: true,
+  },
+  {
     path: "/contact",
     label: "Contact",
     element: <div>Contact</div>,
+    showInNav: true,
+  },
+  {
+    path: "/our-supporters",
+    label: "Our Supporters",
+    element: <div>Our Supporters</div>,
     showInNav: true,
   },
 ];

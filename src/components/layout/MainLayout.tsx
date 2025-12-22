@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { Box, Container } from "@mui/material";
+import { Box } from "@mui/material";
 import { useState } from "react";
 
 import Navbar from "../../features/layout/navbar/Navbar";
 import MobileMenuOverlay from "../../features/layout//navbar/MenuOverlay";
+import Footer from "../../features/layout/footer/Footer";
 import { useIsMobile } from "../../hooks/useIsMobile";
 
 export function MainLayout() {
@@ -15,12 +16,8 @@ export function MainLayout() {
       <Navbar isCollapsed={isMobile} onMenuOpen={() => setIsMenuOpen(true)} />
 
       <MobileMenuOverlay open={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-
-      <Box component="main" flexGrow={1}>
-        <Container maxWidth="lg" sx={{ py: 4 }}>
-          <Outlet />
-        </Container>
-      </Box>
+      <Outlet />
+      <Footer />
     </Box>
   );
 }

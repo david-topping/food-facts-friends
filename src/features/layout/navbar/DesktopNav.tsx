@@ -16,7 +16,7 @@ export default function DesktopNav() {
       }}
     >
       {navRoutes.map((route) => (
-        <NavLink key={route.path} to={route.path} label={route.label} variant="h5" />
+        <NavLink key={route.path} to={route.path} label={route.label} variant="h6" />
       ))}
     </Box>
   );
