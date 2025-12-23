@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import { useState } from "react";
 
 import Navbar from "../../features/layout/navbar/Navbar";
-import MobileMenuOverlay from "../../features/layout//navbar/MenuOverlay";
+import MobileMenuOverlay from "../../features/layout/navbar/MenuOverlay";
 import Footer from "../../features/layout/footer/Footer";
 import { useIsMobile } from "../../hooks/useIsMobile";
 import { AnalyticsListener } from "../../app/analytics/AnalyticsListener";

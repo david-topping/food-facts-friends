@@ -1,18 +1,11 @@
 import ReactGA from "react-ga4";
-
-const GA_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID;
+import { appConfig } from "../../config/appConfig";
 
 export const initGA = () => {
-  if (!GA_ID) {
-    console.warn("GA ID not set");
-    return;
-  }
-
-  ReactGA.initialize(GA_ID);
+  ReactGA.initialize(appConfig.googleAnalyticsId);
 };
 
 export const trackPageView = (path: string) => {
-  if (!GA_ID) return;
 
   ReactGA.send({
     hitType: "pageview",
@@ -25,8 +18,6 @@ export const trackEvent = (
   category: string,
   label?: string
 ) => {
-  if (!GA_ID) return;
-
   ReactGA.event({
     action,
     category,
