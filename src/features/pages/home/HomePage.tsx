@@ -6,25 +6,35 @@ import { HeroImage } from "../../../components/hero/HeroImage";
 import { HOME_CONTENT } from "../../../content/home.content";
 import { HomeHeroIntro } from "./components/HeroIntro";
 import { FindUs } from "./components/FindUs";
-import { NeedHelp } from "./components/NeedHelp";
+import { NeedSupport } from "./components/NeedSupport";
+import { useNavigate } from "react-router-dom";
+
 export const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <Page>
       <HeroImage image={homeHero} />
 
       <Section variant="default" maxWidth="md">
-        <HomeHeroIntro title={HOME_CONTENT.title} subText={HOME_CONTENT.statement} logo={logo} />
+        <HomeHeroIntro
+          title={HOME_CONTENT.hero.title}
+          subText={HOME_CONTENT.hero.statement}
+          logo={logo}
+        />
       </Section>
 
       <Section variant="dark">
-        <NeedHelp
-          title={HOME_CONTENT.needHelp}
-          description={HOME_CONTENT.needHelpStatement}
-        ></NeedHelp>
+        <NeedSupport
+          title={HOME_CONTENT.needSupport.title}
+          description={HOME_CONTENT.needSupport.description}
+          buttonText={HOME_CONTENT.needSupport.button.label}
+          onButtonClick={() => navigate(HOME_CONTENT.needSupport.button.route)}
+        />
       </Section>
 
       <Section variant="default" maxWidth="xl">
-        <FindUs title={HOME_CONTENT.findUs} coordinates={HOME_CONTENT.coordinates} />
+        <FindUs title={HOME_CONTENT.findUs.title} coordinates={HOME_CONTENT.findUs.location} />
       </Section>
     </Page>
   );

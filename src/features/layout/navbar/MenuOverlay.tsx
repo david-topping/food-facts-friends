@@ -13,7 +13,7 @@ export default function MobileMenuOverlay({ open, onClose }: MobileMenuOverlayPr
     <>
       <Backdrop open={open} onClick={onClose} sx={{ zIndex: 1200 }} />
 
-      {/* Sliding overlay */}
+      {/* sliding overlay */}
       <Slide direction="left" in={open} mountOnEnter unmountOnExit>
         <Box
           sx={{
@@ -26,7 +26,7 @@ export default function MobileMenuOverlay({ open, onClose }: MobileMenuOverlayPr
             p: 2.5,
           }}
         >
-          {/* Close button */}
+          {/* close button */}
           <Box
             sx={{
               display: "flex",
@@ -43,12 +43,12 @@ export default function MobileMenuOverlay({ open, onClose }: MobileMenuOverlayPr
             </IconButton>
           </Box>
 
-          {/* Menu items */}
+          {/* menu items */}
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: 3,
+              gap: 7,
             }}
           >
             {APP_ROUTES.filter((r) => r.showInNav).map((route) => (
@@ -57,7 +57,7 @@ export default function MobileMenuOverlay({ open, onClose }: MobileMenuOverlayPr
                 to={route.path}
                 label={route.label}
                 onClick={onClose}
-                variant="h2"
+                variant="h4"
               />
             ))}
           </Box>
