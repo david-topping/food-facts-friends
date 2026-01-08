@@ -24,7 +24,7 @@ export const palette: PaletteOptions = {
 
   text: {
     primary: "#1F2F29",
-    secondary: "#466957ff",
+    secondary: "#2e5441ff",
   },
 
   divider: "rgba(0, 0, 0, 0.08)",
