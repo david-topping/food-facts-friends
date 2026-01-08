@@ -5,7 +5,7 @@ export const DONATE_CONTENT = {
   hero: {
     title: "How you can Donate",
     subTitle:
-      "Your generosity helps us support individuals and families in our community when they need it most.",
+      "Your generosity helps us support individuals and families in our community when they need it most",
   },
 
   financialDonation: {
